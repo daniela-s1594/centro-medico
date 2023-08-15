@@ -11,11 +11,21 @@ export const Formulario = () => {
   const handleSubmit =(e) => {
     e.preventDefault();
 
-    console.log(nombreMascota);
-    console.log(nombrePropietario);
-    console.log(email);
-    console.log(Alta);
-    console.log(sintomas);
+    const data = {
+      nombreMascota,
+      nombrePropietario,
+      email,
+      Alta,
+      sintomas
+    }
+
+    console.log(data);
+
+    setNombreMascota('');
+    setNombrePropietario('');
+    setEmail('');
+    setAlta('');
+    setSintomas('');
   }
   return (
     <div className='md:w-1/2 lg:w-2/5 mx-5' >
@@ -90,7 +100,7 @@ export const Formulario = () => {
         <input type="submit" 
         className='bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors'
         value={'Agregar paciente'} />
-      </form>q
+      </form>
     </div>
   );
 };
