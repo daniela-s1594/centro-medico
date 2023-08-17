@@ -19,7 +19,7 @@ export const Formulario = () => {
       sintomas
     }
 
-    console.log(data);
+    (Object.values(data).every(value => value !== ''))? console.log(data) : console.log('Llene todos los campos. Por favor.')
 
     setNombreMascota('');
     setNombrePropietario('');
